@@ -12,7 +12,7 @@ body{
 
 header{
   height:80px;
-  background:#241105;
+  background:#827148;
   color:white;
   display:flex;
   justify-content:space-around;
@@ -90,12 +90,12 @@ button{
 }
 
 .slide-two{
-  background-image:url("images/Background3.jpg");
+  background-image:url("images/iced.jpg");
   animation-delay:-5s;
 }
 
 .slide-three{
-  background-image:url("images/Picture2..jpg");
+  background-image:url("images/coffee's.jpg");
   animation-delay:-10s;
 }
 
@@ -136,15 +136,24 @@ button{
 
 .about{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr;
   gap:40px;
   padding:60px 120px;
-  align-items:center;
+  align-items:start;
 }
 
 .about img{
   width:100%;
+  height:360px;
+  object-fit:cover;
   border-radius:14px;
+  grid-column:2;
+  grid-row:1;
+}
+
+.about > div:not(.features){
+  grid-column:1;
+  grid-row:1;
 }
 
 .about h4,
@@ -153,15 +162,42 @@ button{
   letter-spacing:2px;
 }
 
+nav a:hover{
+  background: color #d99a43;
+}
+
+.about-button{
+  display:inline-block;
+  background:#c98536;
+  color:white;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:bold;
+}
+
 .about h2,
 .menu h2{
   font-size:34px;
   margin:15px 0;
 }
 
+.about > div:not(.features) p{
+  text-align:left;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
 .features p{
   margin-bottom:25px;
   line-height:1.5;
+}
+
+.features{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:30px;
 }
 
 .menu{
@@ -256,7 +292,11 @@ footer p{
     padding:20px;
   }
 
-  .about,
+  .about{
+    grid-template-columns:1fr 1fr;
+    padding:40px 25px;
+  }
+
   footer{
     grid-template-columns:1fr;
     padding:40px 25px;
@@ -276,6 +316,16 @@ footer p{
 }
 
 @media(max-width:600px){
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .about img,
+  .about > div:not(.features){
+    grid-column:auto;
+    grid-row:auto;
+  }
+
   header{
     padding:20px 15px;
     text-align:center;
@@ -343,4 +393,89 @@ footer p{
     text-align:center;
     padding:40px 25px 70px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+figure {
+  text-align: center;       /* centers image + caption */
+  margin: 20px auto;        /* spacing around the figure */
+}
+
+figure img {
+  max-width: 300px;         /* keeps image size manageable */
+  display: block;
+  margin: 0 auto;           /* centers the image */
+  border-radius: 10px;      /* optional: rounded corners */
+}
+
+figcaption {
+  font-size: 14px;          /* smaller caption text */
+  color: #555;              /* softer gray tone */
+  margin-top: 8px;          /* space between image and caption */
+  font-style: italic;       /* makes it look like a caption */
 }
