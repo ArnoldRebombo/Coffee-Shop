@@ -73,6 +73,34 @@ button{
   cursor:pointer;
 }
 
+.btn {
+  background:#c98536;
+  color:white;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:18px;
+  font-weight:bold;
+  cursor:pointer;
+  display:inline-block;
+  transition:all 0.3s ease;
+}
+
+.btn:hover {
+  background:#a86428;
+  color:#fff;
+}
+
+.btn.outline {
+  background:transparent;
+  border:1px solid #c98536;
+  color:#c98536;
+}
+
+.btn.outline:hover {
+  background:#c98536;
+  color:#fff;
+}
+
 .hero{
   height:500px;
   position:relative;
@@ -197,7 +225,7 @@ nav a:hover{
   color:white;
   text-decoration:none;
   padding:14px 28px;
-  border-radius:6px;
+  border-radius:15px;
   font-weight:bold;
 }
 
@@ -305,6 +333,15 @@ footer p{
   left:50%;
   transform:translateX(-50%);
   color:#2b170c;
+}
+
+.credit a {
+  color:#f2c087;
+  text-decoration:none;
+}
+
+.credit a:hover {
+  text-decoration:underline;
 }
 
 @media(max-width:900px){
